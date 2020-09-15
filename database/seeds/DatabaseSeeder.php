@@ -11,6 +11,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+        $sections = factory(\App\Section::class, 10)
+            ->create()
+            ->each(function ($section){
+                $section->tasks()->createMany(
+                    factory(App\Task::class, 10)->make()->toArray()
+                );
+            });
     }
 }

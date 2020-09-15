@@ -18,6 +18,7 @@ class CreateTasksTable extends Migration
             $table->integer('section_id');
             $table->string('title');
             $table->string('description')->nullable();
+            $table->boolean('state')->default(false);
             $table->timestamps();
         });
     }

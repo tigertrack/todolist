@@ -85,6 +85,14 @@ class TaskController extends Controller
         return response()->json(['message' => 'Task successfully updated.'], 202);
     }
 
+    public function change(Task $task)
+    {
+        $task->state = !$task->state;
+        $task->save();
+        $state_string = ($task->state) ? "Done" : "Todo";
+        return response()->json(['message' => "Task state successfully updated to $state_string"], 202);
+    }
+
     /**
      * Remove the specified resource from storage.
      *
