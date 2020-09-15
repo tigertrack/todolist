@@ -18,14 +18,15 @@ class SectionTest extends TestCase
     
     public function testShowAllSections()
     {
-        $response = $this->get('/');
+        $response = $this->get('/api/sections');
 
         $response->assertStatus(200);
     }
 
     public function testshowSection()
     {
-        $response = $this->get('/');
+        $section = factory(\App\Section::class)->create();
+        $response = $this->get('/api/section/'.$section->id);
 
         $response->assertStatus(200);
     }
