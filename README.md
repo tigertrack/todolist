@@ -1,7 +1,7 @@
 # Features
 - [x] The user can show, create, update, or delete a section.
 - [x] The user can create, update, or delete a task.
-- [ ] The user can show tasks of a section.
+- [x] The user can show tasks of a section.
 - [ ] The user can change the state of the task from todo to done or from done to todo.
 - [ ] The user can filter the tasks by the state.
 - [ ] The user can search a task

@@ -50,7 +50,7 @@ class SectionController extends Controller
      */
     public function show(Section $section)
     {
-        return $section;
+        return $section->load('tasks');
     }
 
     /**
