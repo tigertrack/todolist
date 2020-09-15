@@ -39,7 +39,7 @@ class SectionController extends Controller
             'name' => $request->name
         ]);
 
-        return response()->json(['message' => 'Section successfully created.'], 200);
+        return response()->json(['message' => 'Section successfully created.'], 201);
     }
 
     /**
@@ -77,7 +77,7 @@ class SectionController extends Controller
 
         $section->save();
 
-        return response()->json(['message' => 'Section successfully updated.'], 200);
+        return response()->json(['message' => 'Section successfully updated.'], 202);
     }
 
     /**
